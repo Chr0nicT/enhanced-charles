@@ -1,7 +1,7 @@
 # Enhanced Charles
  The working base of a module injector/patcher for Java built apps
 
-The few modules already implemented are designated to work on Charles 4.6.2, but the key process works on any version/any Java-built app, aslong as the modules you implement follow the said version/app logic.
+The few modules already implemented are designated to work on Charles 4.6.7, but the key process works on any version/any Java-built app, aslong as the modules you implement follow the said version/app logic.
 
 Made this essentially for myself to improve Charles by adding new features and fix bugs that bothered me, but thought this might be helpful to someone at some point.
 
