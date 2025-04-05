@@ -9,10 +9,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Patcher patcher = new Patcher("/users/cat/work/charles.jar");
+        Patcher patcher = new Patcher("C:\\Users\\Admin\\Desktop\\charles.jar");
         if (patcher.initialize())
             if (patcher.applyTransformers(
-                    Paths.get("/users/cat/work/patched-charles.jar"),
+                    Paths.get("C:\\Users\\Admin\\Desktop\\patched-charles.jar"),
                     new DemoTransformer(),
                     new JA3Transformer(),
                     new HeaderKeysTransformer(),

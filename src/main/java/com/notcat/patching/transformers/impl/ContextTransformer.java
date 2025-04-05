@@ -33,7 +33,7 @@ public class ContextTransformer implements ITransformer {
             CtClass contextClass = classPool.get(classPath = "com.xk72.charles.gui.session.popups.TransactionPopupMenu");
             contextClass.getDeclaredMethod("prepare", new CtClass[]{
                     classPool.get("boolean")
-            }).setBody("{if (a())\n" +
+            }).setBody("{if (TKU())\n" +
                     "      return; \n" +
                     "    add((Action)new CopyURLAction((ModelNode)this.transaction));\n" +
                     "    add((Action)new com.xk72.charles.gui.transaction.actions.CopyToClipboardAction.CurlCommand(this.transaction));\n" +
@@ -63,14 +63,14 @@ public class ContextTransformer implements ITransformer {
                     "    if (this.transaction.getInterruptableChannel() != null)\n" +
                     "      add((Action)new TerminateAction(this.transaction)); \n" +
                     "    addSeparator();\n" +
-                    "    com.xk72.charles.gui.session.popups.g g = new com.xk72.charles.gui.session.popups.g(this);\n" +
-                    "    add(ViewAsTypeMenu.a(g));\n" +
-                    "    add(ViewAsTypeMenu.b(g));\n" +
+                    "    com.xk72.charles.gui.session.popups.f f = new com.xk72.charles.gui.session.popups.f(this);\n" +
+                    "    add(ViewAsTypeMenu.TKU(f));\n" +
+                    "    add(ViewAsTypeMenu.a(f));\n" +
                     "    addLocationUsingTool((com.xk72.charles.tools.LocationUsingTool)new com.xk72.charles.gui.transaction.viewers.TransactionViewerContentTypeManager());\n" +
                     "    if (this.navigator instanceof com.xk72.charles.gui.session.tables.a || this.navigator instanceof com.xk72.charles.gui.session.trees.h) {\n" +
                     "      addSeparator();\n" +
                     "      add((Action)new com.xk72.charles.gui.transaction.actions.SwitchStructureNavigatorAction((com.xk72.charles.model.ModelNode)this.transaction, this.navigator));\n" +
-                    "    } else if (this.navigator instanceof com.xk72.charles.gui.session.trees.p) {\n" +
+                    "    } else if (this.navigator instanceof com.xk72.charles.gui.session.trees.o) {\n" +
                     "      addSeparator();\n" +
                     "      add((Action)new com.xk72.charles.gui.transaction.actions.SwitchStructureNavigatorAction((com.xk72.charles.model.ModelNode)this.transaction, this.navigator));\n" +
                     "    } \n" +
@@ -83,7 +83,7 @@ public class ContextTransformer implements ITransformer {
                     "      addSeparator();\n" +
                     "      addClear();\n" +
                     "      addClearOthers();\n" +
-                    "      if (this.transaction.getProtocol() != null && com.xk72.proxy.http.HttpUtils.d(this.transaction.getProtocol())) {\n" +
+                    "      if (this.transaction.getProtocol() != null && com.xk72.proxy.http.HttpUtils.c(this.transaction.getProtocol())) {\n" +
                     "        addSeparator();\n" +
                     "        addSSLProxyingSelector();\n" +
                     "      } \n" +

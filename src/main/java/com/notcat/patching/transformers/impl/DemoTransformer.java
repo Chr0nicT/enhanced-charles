@@ -18,7 +18,7 @@ public class DemoTransformer implements ITransformer {
         try {
 
             // Close runnable
-            CtClass runnableClass = classPool.get("com.xk72.charles.e");
+            CtClass runnableClass = classPool.get("com.xk72.charles.d");
             runnableClass.getDeclaredMethod("run").setBody("{}");
             transformedClasses.add(TransformedClass.from(runnableClass));
 
@@ -28,8 +28,8 @@ public class DemoTransformer implements ITransformer {
             transformedClasses.add(TransformedClass.from(runnableClass));
 
             // Random splash window
-            runnableClass = classPool.get("com.xk72.charles.gui.transaction.frames.f");
-            runnableClass.getDeclaredMethod("d").setBody("{if(this.e != null) { this.f = this.e; this.c(null); } this.c($1); this.b($1);}");
+            runnableClass = classPool.get("com.xk72.charles.gui.transaction.frames.e");
+            runnableClass.getDeclaredMethod("c").setBody("{if(this.d != null) { this.e = this.d; this.b(null); } this.b($1); this.a($1);}");
             transformedClasses.add(TransformedClass.from(runnableClass));
 
             return transformedClasses;
